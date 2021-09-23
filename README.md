@@ -88,15 +88,6 @@ pkill -9 -t pts/1
 
 * as explained in some examples above, just put the pts of the user you want to remove from the machine
 
-
-## hiding your ssh session
-
-* You can use the following command to hide your session from tty.
-
-```
-ssh -t
-```
-
 ## changing ssh user password
 
 * to change a user's password just use the following command
