@@ -98,6 +98,43 @@ passwd [UserName]
 
 * you can change ssh keys
 
+# Changing the ssh port
+
+## Example
+
+> nano /etc/ssh/sshd_config
+
+```
+Include /etc/ssh/sshd_config.d/*.conf
+
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+#HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_ecdsa_key
+#HostKey /etc/ssh/ssh_host_ed25519_key
+```
+* by default the SSH port is port 22, but you can change this port for example
+
+```
+Include /etc/ssh/sshd_config.d/*.conf
+
+Port 55999
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+#HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_ecdsa_key
+#HostKey /etc/ssh/ssh_host_ed25519_key
+```
+
+> service sshd restart
+
+* and ready after restarting the SSH service the SSH port will be at 55999
+
 # Nyancat
 
 ## Preparing the Nyancat
