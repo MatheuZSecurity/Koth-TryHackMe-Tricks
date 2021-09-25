@@ -98,7 +98,7 @@ passwd [UserName]
 
 * you can change ssh keys
 
-# Changing the ssh port
+# Changing the ssh port (NOT RECOMMENDED, IF YOU DO THIS DO IT WITH YOUR FRIENDS IN PRIVATE ROOMS BECAUSE IT MAY RESULT IN PUNISHMENT, IT'S AGAINST THE RULES!)
 
 ## Example
 
