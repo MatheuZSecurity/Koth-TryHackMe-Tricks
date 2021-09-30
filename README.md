@@ -16,7 +16,7 @@ find / -type f \( -perm -4000 -o -perm -2000 \) -print
 * you can use this to make the file immutable and therefore keep your name in this file.
 
 ```
-chattr -i /root/king.txt
+chattr +i /root/king.txt
 ```
 
 ## fixing the vulnerability in /etc/sudoers, for example
@@ -154,6 +154,10 @@ Port 55999
 > chmod +x nyancat
 
 > ./nyancat > /dev/pts/# < here where is the # you will place the enemy PTS where I explained it here in this koth tryhackme tricks.
+
+## Breaking pts by sending spam from urandom
+
+> cat /dev/urandom > /dev/pts/#
 
 
 ## defending box
