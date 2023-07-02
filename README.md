@@ -32,12 +32,12 @@ find / -perm /4000 2>/dev/null
 
 In addition to SUID, you can check the following files;
 
-- /etc/sudoers - layers abuse this to build their persistence.
-- /etc/sudoers.d - layers abuse this to build their persistence.
+- /etc/sudoers - Players abuse this to build their persistence.
+- /etc/sudoers.d - Players abuse this to build their persistence.
 - /etc/crontab - Players abuse this to build their persistence.
-- /var/spool/* - layers abuse this to build their persistence.
+- /var/spool/* - Players abuse this to build their persistence.
 - /etc/systemd/system - Players abuse this to build their persistence.
-- */.ssh/ - layers abuse this to build their persistence.
+- */.ssh/ - Players abuse this to build their persistence.
 - /opt/
 - /etc/passwd - Players Create your own user.
 - /etc/shadow - Players Create your own user.
