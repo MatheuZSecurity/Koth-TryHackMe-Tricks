@@ -501,6 +501,8 @@ cat $PROFILE
 
 You can also use C2 (Command & Control).
 
+#### This repository still has more things to be added.
+
 ## References and studies
 
 [Terraminator Koth-Tricks Repo](https://github.com/Terraminator/thm-koth-tricks)
