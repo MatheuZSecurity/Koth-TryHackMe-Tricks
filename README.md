@@ -6,7 +6,7 @@
 
 King of the Hill (KoTH) is a competitive hacking game, where you play against 10 other hackers to compromise a machine and then patch its vulnerabilities to stop other players from also gaining access. The longer you maintain your access, the more points you get.
 
-But the real challenge for the koth player is defending /root/king.txt . On windows machines king is in C:\king.txt or in C:\Users\Admininstrator\king-server\king.txt
+But the real challenge for the koth player is defending /root/king.txt . On windows machines king is in C:\king.txt or in C:\Users\Admininstrator\king-server\king.txt.
 
 ## Defense/Patching Linux Box
 
@@ -56,7 +56,7 @@ I think this is enough to protect the machine, if you are the first to enter the
 
 Most koth linux machines, you can get a reverse shell, through a simple command injection, you can get an LFI, Backdoors on different ports, among others. I'll put the main ways to defend, The patched codes too.
 
-- Command Injection in Tyler Machine
+- Command Injection in Tyler Machine.
 
 ```
 [root@tyler betatest]# cat checkuser.php
@@ -78,7 +78,7 @@ if (isset($_POST['submit'])) {
 
 ```
 
-- LFI In Lion Machine
+- LFI In Lion Machine.
 
 ```
 root@lion:/var/www/nginx# cat -v index.php
@@ -131,7 +131,7 @@ if (in_array($page, $allowedPages)) {
 root@lion:/var/www/nginx#
 ```
 
-- Unrestricted File load and Perl Reverse shell in Lion Machine
+- Unrestricted File load and Perl Reverse shell in Lion Machine.
 
 ```
 root@lion:/var/www/html/upload# ls
@@ -199,7 +199,7 @@ if (isset($_POST["submit"])) {
 root@lion:/var/www/html/upload#
 ```
 
-- Nostromo RCE In Lion Machine
+- Nostromo RCE In Lion Machine.
 
 ```
 root@lion:/var/nostromo/htdocs# ls
@@ -218,7 +218,7 @@ Serving HTTP on 10.10.76.94 port 8080 ...
 10.14.39.200 - - [01/Jul/2023 12:40:05] "POST /.%0d./.%0d./.%0d./.%0d./bin/sh HTTP/1.1" 501 -
 ```
 
-In My Machine
+In My Machine.
 
 ```
 msf6 exploit(multi/http/nostromo_code_exec) > run
@@ -232,7 +232,7 @@ msf6 exploit(multi/http/nostromo_code_exec) > run
 msf6 exploit(multi/http/nostromo_code_exec) >
 ```
 
-- Backdoor In Panda Machine
+- Backdoor In Panda Machine.
 ```
 [root@panda 06d63d6798d9b6c2f987f045b12031d6]# ls
 flag  index.php
@@ -256,7 +256,7 @@ if ($_POST['cmd']){
 [root@panda 06d63d6798d9b6c2f987f045b12031d6]#
 ```
 
-- Changing Password Tomcat in Shrek Machine
+- Changing Password Tomcat in Shrek Machine.
 
 ```
 [root@shrek conf]# pwd
@@ -270,7 +270,7 @@ if ($_POST['cmd']){
 [root@shrek conf]#
 ```
 
-- File containing SSH-KEY for user
+- File containing SSH-KEY for user.
 
 ```
 [root@shrek html]# pwd;head -n10 Cpxtpt2hWCee9VFa.txt #This is SSH-KEY
@@ -317,7 +317,7 @@ sudo mount -o bind /dev/shm/sqashfs/king.txt /root/king.txt
 sudo rm -rf /dev/shm/root_f 
 ```
 
-By the way, if you try to put your nick once in /root/king.txt and the message "Read-only file system" appears, most likely, the other player is using this technique
+By the way, if you try to put your nick once in /root/king.txt and the message "Read-only file system" appears, most likely, the other player is using this technique.
 
 To undo this, just use umount.
 
@@ -360,7 +360,7 @@ In this technique, I plan to add my C code along with its Makefile very soon.
 
 - LD_PRELOAD for defense of king.
 
-Soon I will also add a code for this way to defend the king
+Soon I will also add a code for this way to defend the king.
 
 - Programs written in C to protect the king.
 
