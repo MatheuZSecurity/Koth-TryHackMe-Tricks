@@ -503,7 +503,7 @@ You can also use C2 (Command & Control).
 
 ## References and studies
 
-[Terraminator](https://github.com/Terraminator)
+[Terraminator Koth-Tricks Repo](https://github.com/Terraminator/thm-koth-tricks)
 
 [ired.team](https://www.ired.team/)
 
